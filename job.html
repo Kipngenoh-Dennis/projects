@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="job.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>My Webpage</title>
+</head>
+<body>
+  <div>
+
+    <section class="wrapper-main">
+    <h1>Welcome to My Webpage</h1>
+
+    <video controls width="900" autoplay muted loop  >
+      
+      <source src="your-video.mp4" type="video/mp4">
+        <source src="videos/video.ogg" type="video/ogg">
+        <source src="videos/video.webm" type="video/webm">
+    
+        Place any text here
+
+    </video>
+
+    <p>Check out this link:</p>
+    <br>
+    <div class="image">
+    <a href="C:\Users\bradl\OneDrive\Desktop\codeimage.jpeg"> Click here</a>
+
+      <br>
+      <a href="C:\Users\bradl\Desktop\codeimage.jpeg"><img src="C:\Users\bradl\Desktop\codeimage.jpeg" alt="Clickable Image"></a>
+    </div>
+    <br>
+
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="halfSize()">Half size</button>
+    <button onclick="normalSize()">Normal size</button>
+
+  </section>
+  </div>
+  <script>
+
+    let myVideo = document.querySelector("my-video");
+
+    function playPause(){
+      if (myVideo.paused){
+        myVideo.play();
+      }
+      else{
+        myVideo.pause();
+      }
+
+      myVideo.paused;
+      myVideo.pause();
+    }
+
+    function halfSize(){
+    
+      myVideo.width = "450";
+      myVideo.pause();
+
+    }
+    function normalSize(){
+      myVideo.width = "900";
+      myVideo.pause();
+    
+  }
+  </script>
+</body>
+</html>

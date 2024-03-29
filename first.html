@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertable triange</title>
+    <style>
+        .con-triangle
+        {
+            mask-repeat: repeat;
+            display: flex;
+            margin-left: 120px;
+            width: 120px;
+            height: 120px;
+            animation: con-0 1.5s infinite linear;
+        }
+        .con-triangle:before,
+        .con-triangle:after {
+            content: "";
+            width: 50%;
+            background: #f72585;
+            clip-path: polygon(0 0, 100% 50%, 0% 100%);
+            animation: inherit;
+            animation-name: con-1;
+            transform-origin: bottom left;
+        }
+        .con-triangle:before {
+            clip-path: polygon(0 50%, 100% 0, 100% 100%);
+            transform-origin: bottom right;
+            --s: -1;
+        }
+
+        @keyframes con-0 {
+            0%,
+            34.99% {
+                transform: scaleY(1);
+            }
+            35%,
+            70% {
+                transform: scaleY(-1);
+            }
+            90%,
+            100% {
+                transform: scaleY(-1) rotate(60deg);
+            }
+        }
+        @keyframes con-1 {
+            0%,
+            10%,
+            70%,
+            100% {
+                transform: translateY(-100%)
+                rotate(calc(var(--s, 1) * 135deg));
+            }
+            35% {
+                transform: translateY(0%) rotate(0deg);
+            } 
+        }
+    </style>
+</head>
+<body>
+ <h1>Convertable Triangle Animation</h1>
+ <div class="con-triangle"></div>
+</body>
+</html>

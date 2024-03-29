@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+body {
+    background-color: #111;
+    background-image: none;
+}
+
+.wrapper-main {
+width: 900px;
+margin: 0 auto;
+}
+
+body:after{
+position: absolute;
+width: 0;
+height: 0;
+overflow: hidden;
+z-index: -1;
+content: url(..C:\Users\bradl\css\helloworld.jpeg) url(..C:\Users\bradl\css\codeimage.jpeg);
+}
+
+.image{
+    width: auto;
+    height: auto;
+    background-image: url(..C:\Users\bradl\css\codeimage.jpeg);
+    background-size: cover ;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+
+.image:hover {
+background-image: url(..C:\Users\bradl\css\helloworld.jpeg);
+}
+
+button {
+    padding:  10px 16px;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: Roboto;
+    border-radius: 20px;
+    cursor: pointer;
+}
